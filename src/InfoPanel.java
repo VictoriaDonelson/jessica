@@ -34,17 +34,6 @@ public class InfoPanel extends JPanel implements ActionListener{
 		nextShape.setVerticalAlignment(JLabel.TOP);
 		nextShape.setFont(new Font("Serif", Font.PLAIN, 18));	
 		
-		/*score = new JLabel("Score:  0", SwingConstants.CENTER);
-		score.setFont(new Font("Serif", Font.PLAIN, 18));
-		JPanel buttonPanel = new JPanel();
-		pause = new JButton("Pause/Play");
-		pause.addActionListener(this);
-		buttonPanel.add(pause);
-		add(nextShape, BorderLayout.NORTH);
-		add(score, BorderLayout.CENTER);
-		add(buttonPanel, BorderLayout.SOUTH);	
-		JPanel centerPanel = new JPanel (new GridLayout(5,1));*/
-		
 		JLabel filler1 = new JLabel("");
 		JLabel filler2 = new JLabel("");
 		JLabel filler3 = new JLabel("");
@@ -65,9 +54,6 @@ public class InfoPanel extends JPanel implements ActionListener{
 		pause = new JButton("Pause/Play");
 		pause.addActionListener(this);
 		
-		//mute = new JButton("Mute");
-		//mute.addActionListener();
-		
 		JPanel pausePanel = new JPanel();
 		pausePanel.add(restart);
 		JPanel restartPanel = new JPanel();
@@ -84,9 +70,6 @@ public class InfoPanel extends JPanel implements ActionListener{
 		add(restartPanel);
 		add(filler4);
 
-		
-		
-		
 	}
 	
 	public void paintComponent(Graphics g2){
@@ -104,13 +87,13 @@ public class InfoPanel extends JPanel implements ActionListener{
 		g2.setColor(color);
 		g2.fillRect(x, y, size, size);
 		g2.setColor(color.brighter());
-	    g2.drawLine(x, y + size - 1, x, y);
-	    g2.drawLine(x, y, x + size - 1, y);
+	    	g2.drawLine(x, y + size - 1, x, y);
+	    	g2.drawLine(x, y, x + size - 1, y);
 
-	    g2.setColor(color.darker());
-	    g2.drawLine(x + 1, y + size - 1,
+	    	g2.setColor(color.darker());
+	    	g2.drawLine(x + 1, y + size - 1,
 	                         x + size - 1, y + size - 1);
-	    g2.drawLine(x + size - 1, y + size - 1,
+	    	g2.drawLine(x + size - 1, y + size - 1,
 	                         x + size - 1, y + 1);
 			
 	}
